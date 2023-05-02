@@ -10,6 +10,7 @@ License:	GPLv3+
 URL:		https://github.com/zcot/conky-manager2
 Source0:	https://github.com/zcot/conky-manager2/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	meson
+BuildRequires:	imagemagick
 BuildRequires:	pkgconfig(ImageMagick)
 BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(gtk+-3.0)
