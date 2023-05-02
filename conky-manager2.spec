@@ -1,7 +1,7 @@
 Summary:	A simple GUI for managing Conky config files
 Name:		conky-manager2
 Version:	2.7
-Release:	1
+Release:	2
 Group:		Monitoring
 License:	GPLv3+
 URL:		https://github.com/zcot/conky-manager2
@@ -13,10 +13,12 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:	vala
 
+Requires:	7zip
 Requires:	conky
+Requires:	imagemagick
 Requires:	lm_sensors
 Requires:	hddtemp
-Requires:	7zip
+Requires:	rsync
 
 %rename conky-manager
 Obsoletes:	conky-manager < %{version}
