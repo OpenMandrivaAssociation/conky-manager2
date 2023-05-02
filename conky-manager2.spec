@@ -1,3 +1,6 @@
+#FIMXE: workaround for clang 16
+%global optflags %{optflags} -Wno-incompatible-function-pointer-types
+
 Summary:	A simple GUI for managing Conky config files
 Name:		conky-manager2
 Version:	2.7
@@ -7,10 +10,11 @@ License:	GPLv3+
 URL:		https://github.com/zcot/conky-manager2
 Source0:	https://github.com/zcot/conky-manager2/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	meson
-BuildRequires:	imagemagick
+BuildRequires:	pkgconfig(ImageMagick)
 BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(json-glib-1.0)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	vala
 
 Requires:	7zip
